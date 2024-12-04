@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let num1 = prompt('Please enter first number')
+        // let num2 = prompt('Please enter second number')
+        // if (num1 <= 1 && num2 >= 3) {
+        //     alert('All conditions are met')
+        // } else {
+        //     alert('At least one of the conditions is not met')
+        // }
+
+        // let test = false;
+        // (test === true) ? console.log('+++') : console.log('---');
+        // console.log(test ? '+++' : '---');
+
+        let day = prompt('Please enter day number');
+        if (day <= 0 || day > 31){
+            alert('Invalid day number')
+        }
+        else if (day <= 10){
+            alert('This day belongs to the first decade')
+        } else if (day >= 11 && day <=20){
+            alert('This day belongs to the second decade')
+        } else{
+            alert('This day belongs to the third decade')
+        }
+    </script>
+</body>
+
+</html>
