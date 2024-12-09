@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        const cube = number => number ** 3;
+
+        console.log(cube(2) + cube(3));
+    </script> -->
+    <!-- <script>
+        let userNumber = Number(prompt('Please enter a number'));
+        function isItNumber() {
+            if (!isNaN(userNumber)) {
+                return true;
+            }
+            else {
+                alert('Not a valid value. Please enter a number');
+                return false;
+            }
+        }
+
+        function salary(number) {
+            let type = isItNumber();
+            if (type === true) {
+                return number *= 0.87;
+            }
+        }
+
+        console.log(salary(userNumber));
+
+    </script> -->
+    <!-- <SCript>
+        let firtsUserNumber = prompt('Please enter the first number');
+        let secondeUserNumber = prompt('Please enter the seconde number');
+        let thirdUserNumber = prompt('Please enter the third number');
+
+        // option 1
+        function maxNumber(firtsUserNumber, secondeUserNumber, thirdUserNumber) {
+            return  Math.max(firtsUserNumber, secondeUserNumber, thirdUserNumber);
+        }
+
+        console.log(maxNumber(firtsUserNumber, secondeUserNumber, thirdUserNumber));
+
+        // option 2
+
+        function maxNumber(firtsUserNumber, secondeUserNumber, thirdUserNumber) {
+            let maxNumber = firtsUserNumber;
+            if (secondeUserNumber > maxNumber) {
+                maxNumber = secondeUserNumber;
+
+            }
+            if (thirdUserNumber > maxNumber) {
+                maxNumber = thirdUserNumber;
+            }
+            return maxNumber;
+        }
+
+        console.log(maxNumber(firtsUserNumber, secondeUserNumber, thirdUserNumber));
+
+    </SCript> -->
+
+    <script>
+        let firtsUserNumber = Number(prompt('Please enter the first number'))
+        let secondeUserNumber = Number(prompt('Please enter the seconde number'))
+
+        function sum(firstNumber, secondNumber) {
+            return firstNumber + secondNumber
+        }
+
+        function subtraction(firstNumber, secondNumber) {
+            return firstNumber - secondNumber
+        }
+
+        function multiplication(firstNumber, secondNumber) {
+            return firstNumber * secondNumber
+        }
+
+        function dividing(firstNumber, secondNumber) {
+            return firstNumber / secondNumber
+        }
+
+        console.log(sum(firtsUserNumber, secondeUserNumber));
+        console.log(subtraction(firtsUserNumber, secondeUserNumber));
+        console.log(multiplication(firtsUserNumber, secondeUserNumber));
+        console.log(dividing(firtsUserNumber, secondeUserNumber));
+    </script>
+</body>
+
+</html>
