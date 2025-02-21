@@ -38,4 +38,9 @@ let data = `[
 ]`
 
 let fromJSON = JSON.parse(data);
-console.log(fromJSON);
+
+const colorDictionary = ['Gray', 'Black', 'White', 'Red', 'Green', 'Yellow', 'Orange', 'Blue', 'Magenta'];
+
+const sizeDictionary = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+
+let cartArray = [];
