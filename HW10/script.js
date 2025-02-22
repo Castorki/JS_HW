@@ -157,8 +157,10 @@
 
     }
 
+    // Прошлое домашнее задание
+
     function createTitle() {
-        let mainContainer = document.querySelector('.main__container');
+        let mainContainer = document.querySelector('.main__container');   
 
         let headingContainer = document.createElement('div');
         headingContainer.classList.add('main__heading');
@@ -191,7 +193,7 @@
         mainContainer.appendChild(headingContainer);
     }
 
-    function createItems(owner, itemsArray) {
+    function createItems(itemsArray) {
         let mainContainer = document.querySelector('.main__container');
 
         let itemsContainer = document.createElement('div');
@@ -293,7 +295,7 @@
             });
 
             addButton.addEventListener('click', function () {
-                addToCart(owner, item.getAttribute('id'));
+                addToCart(item.getAttribute('id'));
             });
 
             addButton.append(cartIcon, addButtonText);
@@ -305,6 +307,9 @@
         });
     }
 
+
+    // Текущее домашнее задание
+    
     function createCart() {
         let mainContainer = document.querySelector('.main__container');
 
@@ -354,7 +359,7 @@
         return true;
     };
 
-    function addToCart(owner, id) {
+    function addToCart(id) {
         let choisenProductsContainer = document.querySelector('.choisen__products');
         let curentProduct = document.getElementById(id);
         let currentProductPrice = document.createElement('span');
@@ -488,13 +493,11 @@
             product.append(productImage, productInfoContainer);
             choisenProductsContainer.appendChild(product);
             cartArray.push(product);
-            setToDoDate(owner, product);
 
         } else {
             for (let i = 0; i < cartArray.length; i++) {
                 if (cartArray[i].id === id) {
                     cartArray[i].querySelector('.quantity__number').textContent++;
-                    setToDoDate(owner, product);
                     return;
                 }
             }
@@ -510,16 +513,8 @@
         return sizeDictionary[Math.round(Math.random() * (sizeDictionary.length - 1) - 0)];
     };
 
-    function setToDoDate(owner, product) {
-        localStorage.setItem(owner, JSON.stringify(product));
-    }
 
-    function getToDoData(owner) {
-        let temp = localStorage.getItem(owner);
-        return JSON.parse(temp);
-    }
-
-    function createSite(owner) {
+    function createSite() {
 
         let mainContainer = document.createElement('div');
         mainContainer.classList.add('main__container');
@@ -530,10 +525,9 @@
         createBrandPreview();
         createCategories();
         createTitle();
-        createItems(owner, fromJSON);
+        createItems(fromJSON);
         createCart();
 
-        getToDoData(owner);
     }
 
     window.createSite = createSite;
